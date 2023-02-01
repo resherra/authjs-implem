@@ -5,7 +5,11 @@ export default function CamperVanPage() {
   const userName = session?.user.name
 
   if (status === "loading") {
-    return <p>waiting...</p>
+    return (
+      <div className={`bg-black min-h-screen text-white`}>
+        <p>waiting...</p>
+      </div>
+    )
   }
 
   if (status === "authenticated") {
@@ -26,8 +30,8 @@ export default function CamperVanPage() {
   return (
     <div className={`bg-black`}>
       <div className={`flex flex-col text-center min-h-screen justify-center m-auto gap-4 max-w-max`}>
-        <p className="font-bold text-white">Welcome to Unknown.</p>
-        <div className={`flex justify-center items-center gap-4 bg-white py-2 px-9 rounded-3xl`}>
+        <p className="text-xl font-bold text-white">Welcome to Unknown.</p>
+        <div className={`flex justify-center items-center gap-4 bg-white py-2 px-9 rounded-3xl mt-10`}>
           <h6 className={`w-5`}>
             <img src="/github.svg" alt="" />
           </h6>
